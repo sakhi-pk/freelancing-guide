@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Freelancer's Pre-Launch Playbook (23-Step Launch Sequence) | SAK Coaching Tech Academy</title>
+<meta name="description" content="A 23-step beginner-friendly launch sequence for your first Fiverr or Upwork Gig, with Urdu guidance and interactive tooltips.">
+<!-- Optional Urdu web font. If offline, the system font stack below is used automatically. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600;700&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================
+   DESIGN TOKENS  (deep navy / teal / amber, high contrast)
+   ========================================================== */
+:root{
+  --navy:#0b2545;
+  --navy-2:#13315c;
+  --teal:#0e8f86;
+  --teal-dark:#0a6e67;
+  --teal-soft:#e0f4f2;
+  --amber:#f4a300;
+  --amber-soft:#fff4d6;
+  --bg:#f3f6fa;
+  --card:#ffffff;
+  --ink:#10243e;
+  --muted:#4a5b73;
+  --line:#d8e0ea;
+  --ok:#157f4b;
+  --radius:16px;
+  --shadow:0 6px 22px rgba(11,37,69,.08);
+  --font-en:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --font-ur:"Noto Naskh Arabic","Jameel Noori Nastaleeq","Noto Nastaliq Urdu","Segoe UI",Tahoma,"Arial",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-en);line-height:1.55;-webkit-text-size-adjust:100%}
+a{color:var(--teal-dark)}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px}
+
+/* Urdu blocks: RTL, generous line-height so diacritics never overlap */
+.ur{direction:rtl;text-align:right;font-family:var(--font-ur);line-height:2.25;font-size:1.1rem;unicode-bidi:plaintext}
+.ur .en,.en{direction:ltr;unicode-bidi:isolate;font-family:var(--font-en)}
+
+/* ---------- Header ---------- */
+header.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 60%,var(--teal-dark) 100%);color:#fff;padding:34px 0 28px}
+.brand{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:6px 14px;border-radius:999px;font-size:.85rem;font-weight:600;letter-spacing:.3px}
+header.hero h1{margin:14px 0 6px;font-size:clamp(1.6rem,5vw,2.5rem);line-height:1.2;font-weight:800}
+header.hero h1 span{color:var(--amber)}
+header.hero p.sub{margin:0 0 14px;color:#d6e4f5;max-width:680px}
+.welcome{margin-top:12px;background:rgba(255,255,255,.1);border-right:4px solid var(--amber);border-radius:12px;padding:10px 16px;color:#fff}
+
+/* ---------- Sticky control bar ---------- */
+.controls{position:sticky;top:0;z-index:30;background:rgba(243,246,250,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:12px 0 10px}
+.progress-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.progress-label{font-weight:700;color:var(--navy);white-space:nowrap}
+.bar{flex:1;min-width:140px;height:14px;background:#dbe4ef;border-radius:999px;overflow:hidden}
+.bar>div{height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--amber));border-radius:999px;transition:width .35s ease}
+.reset{background:none;border:1px solid var(--line);color:var(--muted);padding:5px 10px;border-radius:8px;cursor:pointer;font-size:.8rem}
+.reset:hover{border-color:var(--navy);color:var(--navy)}
+.search{width:100%;padding:11px 14px;border:1.5px solid var(--line);border-radius:12px;font-size:1rem;font-family:inherit;background:#fff;color:var(--ink)}
+.search:focus,.tab:focus-visible,.tip:focus-visible,.reset:focus-visible,.cta-btn:focus-visible,.done input:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:10px 2px 2px;scrollbar-width:thin}
+.tab{flex:0 0 auto;border:1.5px solid var(--line);background:#fff;color:var(--navy);padding:8px 14px;border-radius:999px;font-weight:600;font-size:.88rem;cursor:pointer;white-space:nowrap}
+.tab:hover{border-color:var(--teal)}
+.tab.active{background:var(--navy);border-color:var(--navy);color:#fff}
+
+/* ---------- Phase headings & cards ---------- */
+.phase-head{margin:30px 0 10px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.phase-head h2{margin:0;font-size:1.25rem;color:var(--navy)}
+.phase-head .range{background:var(--amber-soft);color:#7a5200;border:1px solid #f1d58a;padding:3px 10px;border-radius:999px;font-size:.78rem;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px 18px 16px;margin:0 0 16px;transition:border-color .2s,box-shadow .2s}
+.card.is-done{border-color:#9fd8b8;background:linear-gradient(180deg,#f4fcf7,#fff 60%)}
+.card-top{display:flex;align-items:flex-start;gap:12px}
+.num{flex:0 0 auto;width:46px;height:46px;border-radius:14px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800;font-size:1.1rem}
+.is-done .num{background:var(--ok)}
+.titles{flex:1;min-width:0}
+.titles h3{margin:0;font-size:1.2rem;color:var(--navy);line-height:1.3}
+.badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.badge{font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:999px;background:var(--teal-soft);color:var(--teal-dark);border:1px solid #b6e3df}
+.badge.core{background:var(--amber-soft);color:#7a5200;border-color:#f1d58a}
+.subtitle{margin-top:8px}
+.section-label{margin:14px 0 2px;font-size:.78rem;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--teal-dark)}
+.actions{margin:4px 0 0;padding:0 22px 0 0;list-style:disc}
+.actions li{margin:2px 0}
+.actions li::marker{color:var(--teal)}
+.example{margin-top:12px;background:var(--amber-soft);border:1px dashed #e3b84a;border-radius:12px;padding:6px 14px}
+.example .section-label{color:#7a5200}
+.done{display:flex;align-items:center;gap:10px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-weight:700;cursor:pointer;width:fit-content}
+.done input{width:22px;height:22px;accent-color:var(--ok);cursor:pointer}
+.empty{text-align:center;padding:36px 12px;color:var(--muted)}
+
+/* ---------- Tooltips ---------- */
+.tip{border-bottom:2px dotted var(--teal);cursor:help;color:#0a5f59;font-weight:600;white-space:normal;border-radius:2px}
+.tip .i{font-family:var(--font-en);font-size:.72em;margin-inline-start:3px;color:var(--teal);vertical-align:super;font-weight:700}
+.tip:hover,.tip.open{background:var(--teal-soft)}
+#tooltip{position:fixed;z-index:100;max-width:min(340px,calc(100vw - 20px));background:var(--navy);color:#fff;border-radius:14px;padding:12px 14px;box-shadow:0 12px 32px rgba(0,0,0,.3);display:none;font-size:.95rem}
+#tooltip.show{display:block}
+#tooltip .tt-term{font-family:var(--font-en);font-weight:800;color:var(--amber);font-size:.9rem;margin-bottom:2px;direction:ltr;text-align:left}
+#tooltip .tt-body{direction:rtl;text-align:right;font-family:var(--font-ur);line-height:2.1}
+#tooltip .tt-ex{margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,.25);direction:rtl;text-align:right;font-family:var(--font-ur);line-height:2.1;color:#ffe9b0}
+#tooltip .tt-ex b{font-family:var(--font-ur);color:var(--amber)}
+#tooltip .tt-close{font-family:var(--font-en);font-size:.7rem;color:#9db4d1;margin-top:6px;direction:ltr;text-align:left}
+
+/* ---------- WhatsApp coaching bridge ---------- */
+.bridge{margin:34px 0 20px;background:linear-gradient(135deg,var(--navy),var(--teal-dark));color:#fff;border-radius:20px;padding:24px 20px;box-shadow:var(--shadow)}
+.bridge h2{margin:0 0 6px;font-size:1.35rem}
+.bridge .ur{color:#eaf6ff}
+.cta-btn{display:inline-block;margin-top:12px;background:var(--amber);color:#2b1c00;font-weight:800;text-decoration:none;padding:12px 22px;border-radius:12px}
+.cta-btn:hover{filter:brightness(1.06)}
+.note{font-size:.8rem;color:#c9dcf0;margin-top:8px}
+footer{padding:12px 0 40px;text-align:center;color:var(--muted);font-size:.85rem}
+
+@media (max-width:560px){
+  .card{padding:14px}
+  .num{width:40px;height:40px;border-radius:12px}
+  .ur{font-size:1.04rem}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="brand">SAK Coaching Tech Academy</span>
+    <h1>Freelancer's Pre-Launch Playbook<br><span>23-Step Launch Sequence</span></h1>
+    <p class="sub">From zero to your first high-converting Gig on Fiverr or Upwork: research, positioning, copy, visuals, launch and early traction.</p>
+    <div class="welcome ur">
+      السلام علیکم! یہ پلے بک ہر نئے فری لانسر کے لیے ہے، بالکل جیسے عمیر بھائی۔ ایک ایک قدم پر چلیں، ہر مرحلہ مکمل ہونے پر ✔ لگائیں، اور جہاں <span class="tip" tabindex="0" role="button" data-key="keyword">ⓘ</span> نظر آئے وہاں ٹیپ کریں یا ماؤس لے جائیں۔
+    </div>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="wrap">
+    <div class="progress-row">
+      <span class="progress-label" id="progressLabel" aria-live="polite">0 / 23 Steps Completed</span>
+      <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="23" aria-valuenow="0" id="barWrap"><div id="barFill"></div></div>
+      <button class="reset" id="resetBtn" type="button">Reset progress</button>
+    </div>
+    <input class="search" id="searchBox" type="search" placeholder="Search steps… (e.g. keyword, thumbnail, FAQ, کیورڈ)" aria-label="Search steps">
+    <div class="tabs" id="tabs" role="tablist" aria-label="Filter by phase"></div>
+  </div>
+</div>
+
+<main class="wrap" id="main" aria-live="polite"></main>
+
+<section class="wrap">
+  <div class="bridge">
+    <h2>SAK Coaching Tech Academy — Next Step</h2>
+    <div class="ur">
+      اگر آپ چاہتے ہیں کہ کوئی مینٹر آپ کی Gig، Title، Description اور Thumbnail دیکھ کر براہِ راست رہنمائی کرے، تو SAK Coaching Tech Academy کی کوچنگ اور مکمل کورس/پلے بک کے بارے میں ہمیں WhatsApp پر پیغام کریں۔ ہم قدم بہ قدم آپ کے ساتھ ہیں۔
+    </div>
+    <!-- CTA PLACEHOLDER: put your real WhatsApp number (country code, digits only) below. -->
+    <a class="cta-btn" id="waBtn" href="#" target="_blank" rel="noopener">Message SAK Coaching on WhatsApp</a>
+    <div class="note" id="waNote">[Placeholder] Set <code>WHATSAPP_NUMBER</code> in the script to activate this button.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© SAK Coaching Tech Academy · Freelancer's Pre-Launch Playbook · Follow each marketplace's current Terms of Service.</div>
+</footer>
+
+<div id="tooltip" role="tooltip" aria-hidden="true"></div>
+
+<script>
+"use strict";
+/* ==========================================================
+   CONFIG
+   ========================================================== */
+// [Placeholder] e.g. "923001234567" (country code + number, digits only)
+const WHATSAPP_NUMBER = "";
+const WHATSAPP_MESSAGE = "Assalam o Alaikum! I finished the Freelancer's Pre-Launch Playbook and want mentorship from SAK Coaching Tech Academy.";
+const STORAGE_KEY = "sak_prelaunch_playbook_v1";
+const TOTAL = 23;
+
+/* ==========================================================
+   PHASES
+   ========================================================== */
+const PHASES = [
+  {id:1, name:"Phase 1: Market & Buyer Foundation", short:"Phase 1", range:"Steps 1–5"},
+  {id:2, name:"Phase 2: Offer & Positioning", short:"Phase 2", range:"Steps 6–10"},
+  {id:3, name:"Phase 3: Gig Copy & Packages", short:"Phase 3", range:"Steps 11–15"},
+  {id:4, name:"Phase 4: Visuals & Trust Assets", short:"Phase 4", range:"Steps 16–19"},
+  {id:5, name:"Phase 5: Pre-Flight QA, Launch & Early Traction", short:"Phase 5", range:"Steps 20–23"}
+];
+
+/* ==========================================================
+   TOOLTIP DICTIONARY
+   t = English term, u = simple Urdu explanation, e = real-world example (Urdu + English terms)
+   ========================================================== */
+const TIPS = {
+  keyword:{t:"Keyword",
+    u:"وہ لفظ یا جملہ جو کلائنٹ سرچ باکس میں ٹائپ کر کے سروس تلاش کرتا ہے۔",
+    e:"Logo Design: کلائنٹ 'logo design for bakery' ٹائپ کرتا ہے۔ یہی جملہ آپ کا keyword ہے۔"},
+  longtail:{t:"Long-tail Keyword",
+    u:"لمبا اور مخصوص سرچ جملہ۔ اس میں مقابلہ کم ہوتا ہے اور خریدار کا ارادہ زیادہ واضح ہوتا ہے۔",
+    e:"Web Development: 'website' بہت عام ہے، جبکہ 'shopify store for clothing brand' long-tail keyword ہے۔"},
+  competitor:{t:"Top-ranking Gigs (Competitors)",
+    u:"وہ Gigs جو آپ کے keyword پر پہلے صفحے پر آتی ہیں۔ ان سے سیکھیں کہ مارکیٹ کیا مان رہی ہے، مگر نقل نہ کریں۔",
+    e:"Video Editing: پہلے 10 Gigs کے Title، قیمت اور reviews دیکھ کر معلوم کریں کہ کون سی چیز کوئی نہیں دے رہا۔"},
+  outcome:{t:"Outcome (Buyer Result)",
+    u:"وہ نتیجہ جو کلائنٹ کو آخر میں ملتا ہے۔ کلائنٹ کام نہیں، نتیجہ خریدتا ہے۔",
+    e:"AI Automation: 'chatbot بناؤں گا' کے بجائے 'آپ کے customer messages کے جواب خودکار ہو جائیں گے' نتیجہ ہے۔"},
+  persona:{t:"Ideal Buyer (Persona)",
+    u:"اپنے مثالی خریدار کا خاکہ: وہ کون ہے، اس کا مسئلہ کیا ہے اور بجٹ کتنا ہے۔",
+    e:"Logo Design: 'نیا café کھولنے والا owner جسے جلدی branding چاہیے' ایک واضح persona ہے۔"},
+  niche:{t:"Niche",
+    u:"اپنی سروس کو کسی مخصوص گروہ یا مسئلے تک محدود کرنا۔ جتنی واضح niche، اتنا جلد بھروسہ۔",
+    e:"'Video Editing' کے بجائے 'YouTube Shorts Editing for Fitness Coaches'۔"},
+  usp:{t:"USP (Unique Value Proposition)",
+    u:"وہ ایک جملہ جو بتاتا ہے کہ کلائنٹ آپ کو دوسروں کے بجائے کیوں چنے۔",
+    e:"Web Development: 'I build mobile-first Shopify stores in 7 days with checkout tested before delivery.'"},
+  deliverable:{t:"Deliverables",
+    u:"وہ ٹھوس چیزیں جو آرڈر کے بعد کلائنٹ کو ملتی ہیں، جیسے فائلز، pages یا ویڈیو۔",
+    e:"Logo Design: 2 concepts، PNG اور SVG فائلیں، اور ایک بنیادی color palette۔"},
+  upsell:{t:"Extras / Upsell",
+    u:"اضافی ادا شدہ سہولتیں، جیسے تیز delivery یا زیادہ revisions، جو خریدار اپنی مرضی سے خریدتا ہے۔",
+    e:"Video Editing: '24-hour delivery' یا 'extra subtitle language' بطور Extra۔"},
+  revision:{t:"Revisions",
+    u:"آپ کے کام میں کلائنٹ کی درخواست پر ترمیم کے مواقع۔ ان کی تعداد پہلے سے طے رکھیں۔",
+    e:"Logo Design: Basic میں 2 revisions، Premium میں زیادہ۔"},
+  category:{t:"Category & Subcategory",
+    u:"مارکیٹ پلیس کی وہ فہرست جس میں آپ کی Gig لگتی ہے۔ غلط category میں Gig صحیح خریدار کو نظر نہیں آتی۔",
+    e:"Web Development کو 'Graphics & Design' میں لگانا غلط ہے؛ درست جگہ 'Programming & Tech' ہوگی۔"},
+  gigtitle:{t:"Gig Title",
+    u:"آپ کی Gig کا سب سے اوپر والا جملہ۔ یہ سرچ اور کلک دونوں پر اثر ڈالتا ہے۔",
+    e:"'I will design a minimalist logo for your coffee shop'۔"},
+  tiers:{t:"Pricing Tiers (Basic / Standard / Premium)",
+    u:"تین پیکجز جن میں سروس کی مقدار اور قیمت بڑھتی جاتی ہے، تاکہ خریدار اپنی ضرورت کے مطابق چنے۔",
+    e:"Web Development: Basic = 1 page، Standard = 5 pages، Premium = 5 pages + SEO setup۔"},
+  seotag:{t:"SEO Tags",
+    u:"مختصر keywords جو مارکیٹ پلیس کو بتاتے ہیں کہ آپ کی Gig کس بارے میں ہے۔ انہیں اپنی keyword research سے لیں۔",
+    e:"Video Editing: 'youtube shorts'، 'reels editing'، 'subtitles'۔"},
+  faq:{t:"FAQ",
+    u:"عام سوالوں کے جواب جو خریدار آرڈر سے پہلے پوچھتا ہے۔ اس سے شکوک کم ہوتے ہیں اور اعتماد بڑھتا ہے۔",
+    e:"'کیا آپ source files دیں گے؟' کا واضح جواب FAQ میں لکھ دیں۔"},
+  requirements:{t:"Buyer Requirements",
+    u:"آرڈر کے فوراً بعد خریدار سے مانگی جانے والی معلومات اور فائلیں، تاکہ کام بغیر رکاوٹ شروع ہو۔",
+    e:"Logo Design: brand name، پسندیدہ رنگ، اور 2 مثال کے logos۔"},
+  thumbnail:{t:"Thumbnail",
+    u:"Gig کی چھوٹی تصویر جو سرچ میں نظر آتی ہے۔ اکثر کلک کا فیصلہ یہی کرتی ہے۔",
+    e:"Logo Design: صاف پس منظر پر ایک بہترین نمونہ اور مختصر عنوان۔"},
+  portfolio:{t:"Portfolio Samples",
+    u:"آپ کے کام کے نمونے۔ اگر ابھی کلائنٹ نہیں ہے تو اپنے تیار کردہ sample projects بنائیں اور انہیں sample ہی لکھیں۔",
+    e:"Web Development: ایک فرضی restaurant کی demo website، جو واضح طور پر 'concept sample' لکھی ہو۔"},
+  responsetime:{t:"Response Time",
+    u:"کلائنٹ کے پیغام کا جواب دینے میں آپ کا اوسط وقت۔ جلدی جواب سے اعتماد اور conversion بہتر ہوتی ہے۔",
+    e:"AI Automation: انکوائری کا جواب ایک گھنٹے کے اندر دینے کی کوشش کریں۔"},
+  qa:{t:"QA (Quality Assurance)",
+    u:"شائع کرنے سے پہلے ہر چیز کا بغور معائنہ: ہجے، قیمتیں، وعدے اور قوانین۔",
+    e:"Description میں ایک جگہ '3 revisions' اور دوسری جگہ '2 revisions' لکھا ہو تو QA اسے پکڑتی ہے۔"},
+  audit:{t:"Audit",
+    u:"شائع ہونے کے بعد Gig کو خریدار کی نظر سے دوبارہ دیکھنا اور کمزوریاں تلاش کرنا۔",
+    e:"موبائل پر اپنی Gig کھول کر دیکھیں کہ Thumbnail اور Title کٹ تو نہیں رہے۔"},
+  impressions:{t:"Impressions",
+    u:"کتنی بار آپ کی Gig سرچ یا فہرست میں دکھائی گئی۔ یہ دکھائی دینے (visibility) کا پیمانہ ہے۔",
+    e:"اگر impressions کم ہوں تو keywords، category اور Tags پر کام کریں۔"},
+  ctr:{t:"CTR (Click-Through Rate)",
+    u:"نظر آنے والوں میں سے کتنے فیصد نے Gig پر کلک کیا۔ کم CTR کا مطلب Title یا Thumbnail کمزور ہو سکتا ہے۔",
+    e:"Video Editing: Thumbnail بدلنے کے بعد CTR کا موازنہ کریں۔"},
+  conversion:{t:"Conversion",
+    u:"Gig دیکھنے والوں میں سے کتنے نے پیغام کیا یا آرڈر کیا۔ کم conversion کا مطلب Description، قیمت یا بھروسے میں کمی ہو سکتی ہے۔",
+    e:"کلکس ہیں مگر آرڈر نہیں؟ Description، packages اور FAQ پر نظرِ ثانی کریں۔"},
+  cta:{t:"CTA (Call To Action)",
+    u:"وہ واضح اگلا قدم جو آپ خریدار سے کروانا چاہتے ہیں۔",
+    e:"'آرڈر سے پہلے اپنی ضرورت بتانے کے لیے مجھے پیغام کریں۔'"},
+  gigdesc:{t:"Gig Description",
+    u:"Gig کا تفصیلی متن جو بتاتا ہے کہ آپ کیا دیں گے، کیسے دیں گے اور کیوں آپ پر بھروسہ کیا جائے۔",
+    e:"Web Development: مسئلہ، حل، پیکجز، طریقہ کار اور CTA۔"},
+  social:{t:"Social Proof",
+    u:"بھروسے کے ثبوت: حقیقی reviews، نمونے، سرٹیفکیٹس۔ جعلی reviews بالکل نہ لیں۔",
+    e:"کلائنٹ کی اجازت سے حقیقی تاثرات (review) اپنی Gig میں دکھانا۔"}
+};
+
+/* ==========================================================
+   THE 23 STEPS
+   Markup inside text: [[key|visible text]] -> interactive tooltip.
+   ========================================================== */
+const STEPS = [
+/* ---------------- PHASE 1 ---------------- */
+{id:1, phase:1, core:true, title:"Keyword Research", badge:"Research",
+ sub:"کلائنٹ اصل میں کیا سرچ کرتا ہے؟",
+ why:`سب سے پہلا قدم یہ جاننا ہے کہ کلائنٹ مارکیٹ پلیس کی سرچ باکس میں کیا ٹائپ کرتا ہے۔ یہ الفاظ [[keyword|Keywords]] کہلاتے ہیں۔ اگر آپ کی Gig میں یہ الفاظ نہیں ہوں گے تو کلائنٹ آپ تک پہنچ ہی نہیں پائے گا۔`,
+ actions:[
+  `Fiverr یا Upwork کی سرچ باکس میں اپنی سروس کا نام لکھیں اور نیچے آنے والی خودکار تجاویز (auto-suggestions) نوٹ کریں۔`,
+  `کم از کم 10 سے 15 [[longtail|Long-tail Keywords]] کی فہرست بنائیں، یعنی وہ لمبے اور مخصوص جملے جو کلائنٹ اصل میں لکھتا ہے۔`,
+  `ہر keyword کے سامنے ایک لائن میں لکھیں کہ اس کے پیچھے کلائنٹ کا مسئلہ کیا ہے۔`,
+  `فہرست کسی شیٹ میں محفوظ کریں، کیونکہ Title، Description اور Tags میں یہی کام آئے گی۔`],
+ example:`Logo Design: صرف 'logo design' بہت عام اور مقابلے والا ہے، جبکہ 'minimalist logo for coffee shop' مخصوص ہے اور اس کے پیچھے ایک واضح خریدار موجود ہے۔`},
+
+{id:2, phase:1, core:true, title:"Competitor Analysis", badge:"Research",
+ sub:"ٹاپ Gigs کیا لکھ رہی ہیں اور کیا چھوڑ رہی ہیں؟",
+ why:`اپنے keyword پر سرچ کریں اور پہلے صفحے کی [[competitor|Top-ranking Gigs]] کو غور سے دیکھیں۔ مقصد نقل کرنا نہیں، بلکہ یہ سمجھنا ہے کہ مارکیٹ کیا قبول کر رہی ہے اور کہاں خالی جگہ (gap) موجود ہے۔`,
+ actions:[
+  `10 Gigs چنیں اور ان کا Title، قیمت، delivery time، reviews کی تعداد اور thumbnail کا انداز نوٹ کریں۔`,
+  `ان کے reviews میں خریداروں کی تعریف اور شکایات دونوں پڑھیں؛ یہی آپ کے لیے مواقع ہیں۔`,
+  `لکھیں کہ سب لوگ کیا وعدہ کر رہے ہیں اور کون سی چیز کوئی نہیں بتا رہا۔`,
+  `ایک سطر میں نتیجہ لکھیں: 'میں ان سے یہاں مختلف ہوں گا'۔`],
+ example:`Video Editing: اگر سب Gigs صرف 'video editing' لکھ رہی ہیں مگر کوئی بھی 'YouTube Shorts with captions' کا واضح پیکج نہیں دے رہا تو یہی آپ کا gap ہو سکتا ہے۔`},
+
+{id:3, phase:1, core:true, title:"Buyer-Centric Copywriting", badge:"Copywriting",
+ sub:"خریدار کی زبان اور نتیجے کی بنیاد پر لکھیں",
+ why:`کلائنٹ کو آپ کی مہارت سے زیادہ اپنا [[outcome|نتیجہ (Outcome)]] چاہیے۔ لکھتے وقت 'میں کیا کرتا ہوں' کے بجائے 'آپ کو کیا ملے گا' پر بات کریں اور وہی زبان استعمال کریں جو کلائنٹ بولتا ہے۔`,
+ actions:[
+  `Step 1 کے keywords سامنے رکھ کر کلائنٹ کے اپنے الفاظ میں اس کا مسئلہ لکھیں۔`,
+  `ہر جملے کے بعد خود سے پوچھیں: 'اس سے کلائنٹ کو کیا فائدہ ہوگا؟'`,
+  `مشکل technical الفاظ کم رکھیں اور سادہ، واضح جملے لکھیں۔`,
+  `پرانے اور نئے جملے کا موازنہ کریں (نیچے مثال دیکھیں)۔`],
+ example:`پہلے: 'I am an experienced web developer.' بعد میں: 'I will build a fast, mobile-friendly website so your customers can order online.' دوسرا جملہ کلائنٹ کے فائدے پر ہے۔`},
+
+{id:4, phase:1, title:"Ideal Buyer Profile", badge:"Buyer",
+ sub:"آپ کس سے بات کر رہے ہیں؟",
+ why:`اپنے [[persona|مثالی خریدار (Ideal Buyer)]] کا واضح خاکہ بنائیں۔ جب خریدار واضح ہو تو Title سے لے کر قیمت تک ہر فیصلہ آسان ہو جاتا ہے۔`,
+ actions:[
+  `خریدار کی قسم لکھیں: چھوٹا کاروبار، startup، agency یا individual creator۔`,
+  `اس کا سب سے بڑا مسئلہ، بجٹ کی حد اور جلدی کی وجہ لکھیں۔`,
+  `طے کریں کہ کس مارکیٹ یا ملک میں آپ کی سروس کی ضرورت زیادہ ہے۔`,
+  `ایک مختصر 'Buyer Card' بنائیں اور اپنی Gig لکھتے وقت اسے سامنے رکھیں۔`],
+ example:`AI Automation: 'ایک چھوٹا online store owner جو روزانہ customer messages کا جواب دینے میں وقت ضائع کرتا ہے' ایک واضح persona ہے۔`},
+
+{id:5, phase:1, title:"Niche & Service Angle", badge:"Positioning",
+ sub:"سب کچھ نہیں، ایک چیز میں مضبوط بنیں",
+ why:`[[niche|Niche]] کا مطلب ہے اپنی سروس کو ایک مخصوص گروہ یا مسئلے تک محدود کرنا۔ نئے فری لانسر کے لیے 'میں سب کچھ کرتا ہوں' کے مقابلے میں ایک واضح اور تنگ niche زیادہ جلدی اعتماد بناتی ہے۔`,
+ actions:[
+  `تین چیزوں کا میل دیکھیں: آپ کی مہارت، مارکیٹ کی طلب (demand)، اور آپ کی دلچسپی۔`,
+  `اپنی سروس کو ایک مخصوص گروہ کے ساتھ جوڑیں (مثلاً fitness coaches یا restaurants)۔`,
+  `ایک Gig میں بہت سی سروسز نہ ڈالیں؛ ایک مرکزی سروس چنیں۔`,
+  `اپنی niche ایک جملے میں لکھ لیں۔`],
+ example:`'Video Editing' کے بجائے 'YouTube Shorts Editing for Fitness Coaches' زیادہ واضح اور یاد رہنے والی niche ہے۔`},
+
+/* ---------------- PHASE 2 ---------------- */
+{id:6, phase:2, title:"Unique Value Proposition (USP)", badge:"Positioning",
+ sub:"کلائنٹ آپ ہی کو کیوں چنے؟",
+ why:`[[usp|USP]] وہ ایک جملہ ہے جو بتاتا ہے کہ کلائنٹ دوسروں کے بجائے آپ کو کیوں ترجیح دے۔ یہ Step 2 کے gap اور Step 4 کے خریدار کے مسئلے سے نکلتا ہے۔`,
+ actions:[
+  `فارمولا استعمال کریں: 'میں [کس کے لیے] [کیا نتیجہ] [کس طریقے سے یا کتنے وقت میں] دیتا ہوں۔'`,
+  `ایسا وعدہ نہ لکھیں جو آپ پورا نہ کر سکیں۔`,
+  `اپنا USP Title، Description کی پہلی لائن اور Thumbnail میں دہرائیں۔`],
+ example:`Logo Design: 'I design simple, print-ready logos for cafés, with 2 concepts and source files included.'`},
+
+{id:7, phase:2, title:"Scope & Deliverables", badge:"Offer",
+ sub:"کیا شامل ہے اور کیا شامل نہیں؟",
+ why:`[[deliverable|Deliverables]] وہ ٹھوس چیزیں ہیں جو کلائنٹ کو ملیں گی۔ جو چیز لکھی نہ ہو، کلائنٹ اسے شامل سمجھ سکتا ہے، اس لیے کام کی حد (scope) پہلے ہی صاف طے کریں۔`,
+ actions:[
+  `لکھیں کہ کیا شامل ہے: pages، files، formats، ورژنز۔`,
+  `واضح طور پر لکھیں کہ کیا شامل نہیں ہے (مثلاً hosting، content writing)۔`,
+  `وہ چیزیں نوٹ کریں جو کلائنٹ کو آپ کو دینی ہوں گی (logo، text، passwords)۔`,
+  `اضافی کام کے لیے [[upsell|Extras]] کا اصول طے کریں۔`],
+ example:`Web Development: '5-page responsive website' شامل ہے، مگر domain اور hosting خریدنا شامل نہیں۔ یہ بات پہلے لکھنے سے بعد میں اختلاف نہیں ہوتا۔`},
+
+{id:8, phase:2, title:"Pricing Research", badge:"Pricing",
+ sub:"بازار کی قیمتیں سمجھیں، سستا بننے کی دوڑ نہ لگائیں",
+ why:`Step 2 کے ڈیٹا سے مارکیٹ کی قیمتوں کی حد دیکھیں۔ سب سے سستا بننے کی کوشش آپ کا وقت اور حوصلہ کھا جاتی ہے۔ قیمت آپ کی ویلیو، کام کے وقت اور [[outcome|نتیجے]] کو ظاہر کرے۔`,
+ actions:[
+  `اپنے competitors کی کم از کم، درمیانی اور زیادہ سے زیادہ قیمتیں لکھیں۔`,
+  `ایک آرڈر پر لگنے والا اپنا اصل وقت گھنٹوں میں لکھیں، پھر دیکھیں کہ آپ کو کم از کم کیا چاہیے۔`,
+  `طے کریں کہ آپ ابتدا میں مارکیٹ کی درمیانی حد کے قریب رہیں گے یا کسی خاص ویلیو کے ساتھ اوپر۔`,
+  `قیمت اور delivery کے فیصلے ایک جگہ لکھ لیں تاکہ بعد میں موازنہ کر سکیں۔`],
+ example:`Video Editing: اگر آپ ہر ویڈیو پر captions اور thumbnail بھی دے رہے ہیں تو آپ سادہ cut-only والوں سے مختلف قیمت رکھنے کی وجہ بتا سکتے ہیں۔`},
+
+{id:9, phase:2, title:"Delivery Time & Revisions Policy", badge:"Offer",
+ sub:"وہی وعدہ کریں جو نبھا سکیں",
+ why:`delivery time اور [[revision|Revisions]] ایسی رکھیں جو آپ واقعی نبھا سکیں۔ دیر سے delivery اور بے شمار revisions نئے فری لانسر کی ریٹنگ اور وقت دونوں کو نقصان پہنچاتے ہیں۔`,
+ actions:[
+  `اپنے کام کا حقیقی وقت لکھیں اور اس میں تھوڑا اضافی وقت (buffer) شامل کریں۔`,
+  `ہر پیکج کے لیے revisions کی تعداد طے کریں۔`,
+  `یہ واضح کریں کہ revision کا مطلب کیا ہے (چھوٹی ترمیم) اور نیا کام کب شمار ہوگا۔`,
+  `تیز delivery کو ادا شدہ [[upsell|Extra]] کے طور پر رکھیں۔`],
+ example:`Logo Design: Basic میں 2 revisions، Standard میں 3، اور 'نیا concept' الگ extra۔ اس سے حد صاف رہتی ہے۔`},
+
+{id:10, phase:2, title:"Category, Subcategory & Attributes", badge:"Setup",
+ sub:"Gig کو صحیح جگہ پر رکھیں",
+ why:`[[category|Category اور Subcategory]] درست چننا اتنا ہی اہم ہے جتنا Title۔ غلط جگہ پر لگی Gig صحیح خریدار کو دکھائی ہی نہیں دیتی۔`,
+ actions:[
+  `Step 2 کے competitors دیکھیں کہ وہ کس category اور subcategory میں ہیں۔`,
+  `Service type، tools اور دیگر attributes کے خانے احتیاط سے پُر کریں۔`,
+  `وہی attributes چنیں جو آپ واقعی دیتے ہیں؛ بے جا اضافہ نہ کریں۔`],
+ example:`Mobile App Development: درست programming category میں iOS/Android اور framework (مثلاً Flutter یا React Native) کی تفصیل واضح رکھیں۔`},
+
+/* ---------------- PHASE 3 ---------------- */
+{id:11, phase:3, core:true, title:"Gig Title", badge:"Copywriting",
+ sub:"کلک اور سرچ کا پہلا دروازہ",
+ why:`[[gigtitle|Gig Title]] سرچ اور کلک دونوں پر اثر ڈالتا ہے۔ اس میں مرکزی keyword اور خریدار کا فائدہ صاف ہونا چاہیے۔`,
+ actions:[
+  `Title عموماً 'I will' سے شروع ہوتا ہے؛ حروف کی حد اور شرائط پلیٹ فارم پر موجودہ قواعد کے مطابق چیک کریں۔`,
+  `مرکزی keyword شروع کے قریب رکھیں اور خریدار کا فائدہ بھی شامل کریں۔`,
+  `'best' یا '#1' جیسے بے ثبوت دعووں سے پرہیز کریں۔`,
+  `2 سے 3 ورژن لکھیں اور سب سے واضح والا چنیں۔`],
+ example:`'I will design a minimalist logo for your coffee shop': اس میں keyword اور خریدار دونوں واضح ہیں۔`},
+
+{id:12, phase:3, title:"Pricing Tiers (Basic, Standard, Premium)", badge:"Pricing",
+ sub:"خریدار کو واضح انتخاب دیں",
+ why:`[[tiers|تین پیکجز]] خریدار کو انتخاب دیتے ہیں اور اکثر درمیانی پیکج کی طرف رہنمائی کرتے ہیں۔ ہر پیکج میں فرق صاف اور سمجھنے میں آسان ہونا چاہیے۔`,
+ actions:[
+  `Basic میں ایک چھوٹا مگر مکمل نتیجہ رکھیں۔`,
+  `Standard میں وہ چیزیں شامل کریں جو زیادہ تر خریدار چاہتے ہیں۔`,
+  `Premium میں زیادہ ویلیو اور [[upsell|اضافی سہولتیں]] دیں، صرف قیمت نہ بڑھائیں۔`,
+  `ہر پیکج میں delivery time اور revisions کا فرق واضح لکھیں۔`,
+  `اعلیٰ پیکج پر پیچیدہ کسٹم کام بغیر حد کے نہ دیں؛ scope لکھ دیں۔`],
+ example:`Web Development: Basic = 1 landing page، Standard = 5 pages + contact form، Premium = 5 pages + basic SEO setup + 30 دن کی مدد (اگر آپ دے سکتے ہوں)۔`},
+
+{id:13, phase:3, core:true, title:"Gig Description", badge:"Copywriting",
+ sub:"مسئلہ، حل، طریقہ، اعتماد، اگلا قدم",
+ why:`[[gigdesc|Description]] کو ایک مختصر کہانی کی طرح لکھیں: خریدار کا مسئلہ، آپ کا حل، کام کا طریقہ، اور اگلا قدم۔ اکثر خریدار صرف شروع کی چند سطریں پڑھتے ہیں، اس لیے سب سے مضبوط بات اوپر رکھیں۔`,
+ actions:[
+  `پہلی لائن میں خریدار کا مسئلہ اور آپ کا وعدہ لکھیں۔`,
+  `پھر بتائیں کہ کیا ملے گا (Step 7 کے deliverables) اور کام کیسے ہوگا۔`,
+  `اپنے تجربے یا نمونوں کی بات مختصر اور سچ پر مبنی رکھیں۔`,
+  `آخر میں واضح [[cta|CTA]] دیں، جیسے 'آرڈر سے پہلے اپنی ضرورت مجھے لکھیں'۔`,
+  `Step 1 کے keywords قدرتی انداز میں شامل کریں، زبردستی نہ ٹھونسیں۔`],
+ example:`مختصر ڈھانچہ: Hook → Problem → What You Get → Process → Why Me → CTA۔`},
+
+{id:14, phase:3, title:"SEO Tags & Search Terms", badge:"SEO",
+ sub:"اپنی keyword research سے tags چنیں",
+ why:`[[seotag|SEO Tags]] پلیٹ فارم کو بتاتے ہیں کہ آپ کی Gig کس بارے میں ہے۔ انہیں اپنی Step 1 کی تحقیق سے لیں، اندازے سے نہیں۔`,
+ actions:[
+  `پلیٹ فارم جتنے tags کی اجازت دے، اتنے ہی چنیں اور ہر tag واقعی متعلقہ رکھیں۔`,
+  `ایک عام keyword اور باقی مخصوص [[longtail|long-tail]] جملے ملا کر رکھیں۔`,
+  `ایسے tags نہ لگائیں جن کا آپ کی سروس سے تعلق نہ ہو۔`],
+ example:`Video Editing: 'youtube shorts editing'، 'subtitles'، 'reels editing for coaches'۔`},
+
+{id:15, phase:3, title:"FAQ & Buyer Requirements", badge:"Trust",
+ sub:"شکوک ختم کریں اور آرڈر کو ہموار رکھیں",
+ why:`اچھا [[faq|FAQ]] خریدار کے وہ سوال حل کرتا ہے جو وہ آرڈر سے پہلے پوچھنا چاہتا ہے۔ [[requirements|Buyer Requirements]] آرڈر کے بعد ضروری معلومات جلد حاصل کرنے میں مدد دیتی ہیں۔`,
+ actions:[
+  `4 سے 6 عام سوالوں کے سیدھے جواب لکھیں: delivery، revisions، فائلز، ادائیگی کے اصول (پلیٹ فارم کے اندر)۔`,
+  `Requirements میں 3 سے 5 مختصر اور واضح سوال رکھیں۔`,
+  `پلیٹ فارم سے باہر رابطہ یا ادائیگی کی ترغیب بالکل نہ دیں۔`],
+ example:`Logo Design کے Requirements: 'Brand name کیا ہے؟ پسندیدہ رنگ؟ دو مثال کے logos جو آپ کو پسند ہوں؟'`},
+
+/* ---------------- PHASE 4 ---------------- */
+{id:16, phase:4, title:"Thumbnail Design", badge:"Visual",
+ sub:"سرچ میں نظر آنے والی پہلی چیز",
+ why:`[[thumbnail|Thumbnail]] اکثر کلک کا فیصلہ کرتا ہے۔ یہ موبائل پر چھوٹا نظر آتا ہے، اس لیے سادہ، صاف اور پڑھنے کے قابل ہونا چاہیے۔`,
+ actions:[
+  `ایک ہی واضح پیغام رکھیں، کم سے کم متن اور صاف پس منظر۔`,
+  `موبائل پر چھوٹا کر کے دیکھیں کہ پڑھنے میں آتا ہے یا نہیں۔`,
+  `دوسروں کی تصاویر یا copyright والا مواد استعمال نہ کریں۔`,
+  `دو ورژن بنائیں؛ بعد میں [[ctr|CTR]] دیکھ کر بہتر والا رکھیں۔`],
+ example:`Web Development: ایک صاف laptop mockup اور مختصر عنوان '5-Page Website in 7 Days' (اگر آپ یہ وعدہ پورا کر سکتے ہیں)۔`},
+
+{id:17, phase:4, title:"Portfolio & Gallery Samples", badge:"Visual",
+ sub:"سچے نمونے دکھائیں",
+ why:`خریدار کام دیکھ کر فیصلہ کرتا ہے۔ اگر ابھی کلائنٹ کا کام نہیں ہے تو اپنے تیار کردہ [[portfolio|sample projects]] بنائیں اور انہیں واضح طور پر sample لکھیں۔ کسی اور کا کام اپنا بنا کر نہ دکھائیں۔`,
+ actions:[
+  `3 سے 5 بہترین نمونے چنیں جو آپ کی niche سے ملتے ہوں۔`,
+  `ہر نمونے کے ساتھ مختصر وضاحت لکھیں کہ مسئلہ کیا تھا اور آپ نے کیا کیا۔`,
+  `اگر نمونہ فرضی یا practice project ہے تو اسے صاف بتائیں۔`,
+  `کلائنٹ کے کام کو دکھانے سے پہلے اس کی اجازت لیں۔`],
+ example:`Video Editing: اپنی بنائی ہوئی 30 سیکنڈ کی 'Before / After' ریل، جس پر لکھا ہو 'Concept Sample'۔`},
+
+{id:18, phase:4, title:"Intro Video (Optional) & Gallery Order", badge:"Visual",
+ sub:"مختصر ویڈیو اور تصاویر کی ترتیب",
+ why:`ایک مختصر تعارفی ویڈیو خریدار کو آپ کی آواز اور انداز سے آشنا کرتی ہے۔ یہ لازمی نہیں، مگر بھروسہ بڑھانے میں مدد دے سکتی ہے۔ تصاویر کی ترتیب بھی سوچ سمجھ کر رکھیں۔`,
+ actions:[
+  `30 سے 60 سیکنڈ میں بتائیں کہ آپ کون ہیں، کس کی مدد کرتے ہیں اور کیا دیتے ہیں۔`,
+  `آواز صاف رکھیں اور پس منظر سادہ رکھیں۔`,
+  `Gallery میں پہلی تصویر سب سے مضبوط رکھیں، پھر process اور نمونے۔`],
+ example:`AI Automation: 20 سیکنڈ کا screen recording جس میں ایک سادہ chatbot کا demo دکھایا جائے (اپنا تیار کردہ demo)۔`},
+
+{id:19, phase:4, title:"Profile & Trust Assets", badge:"Trust",
+ sub:"آپ کا پروفائل بھی آپ کی Gig کا حصہ ہے",
+ why:`بہت سے خریدار Gig کے بعد آپ کا پروفائل دیکھتے ہیں۔ صاف تصویر، واضح تعارف اور درست مہارتیں [[social|بھروسے (Social Proof)]] کی بنیاد بناتی ہیں۔`,
+ actions:[
+  `واضح، پیشہ ورانہ پروفائل تصویر لگائیں۔`,
+  `تعارف مختصر رکھیں: آپ کون ہیں، کس کے لیے کام کرتے ہیں، اور کیا نتیجہ دیتے ہیں۔`,
+  `مہارتیں، زبانیں اور تعلیم یا سرٹیفکیٹس سچ سچ لکھیں۔`,
+  `پلیٹ فارم کی ضروری verification مکمل کریں۔`],
+ example:`Freelancer Bio: 'میں چھوٹے کاروباروں کے لیے سادہ، تیز اور موبائل فرینڈلی websites بناتا ہوں۔'`},
+
+/* ---------------- PHASE 5 ---------------- */
+{id:20, phase:5, title:"Pre-Flight QA Checklist", badge:"QA",
+ sub:"شائع کرنے سے پہلے آخری معائنہ",
+ why:`شائع کرنے سے پہلے مکمل [[qa|QA]] کریں۔ چھوٹی غلطیاں بھی اعتماد کم کرتی ہیں یا پلیٹ فارم کے قواعد کی خلاف ورزی بن سکتی ہیں۔`,
+ actions:[
+  `ہجے اور جملوں کی غلطیاں چیک کریں، ایک بار بلند آواز میں پڑھیں۔`,
+  `تمام پیکجز، قیمتیں، delivery اور revisions کا ایک دوسرے سے ملاپ دیکھیں۔`,
+  `کوئی بے ثبوت دعویٰ، جعلی نتیجہ یا ایسا وعدہ نہ ہو جو آپ پورا نہ کر سکیں۔`,
+  `پلیٹ فارم سے باہر رابطے یا ادائیگی کا ذکر نہ ہو۔`,
+  `Thumbnail اور نمونوں میں کوئی copyright والا مواد نہ ہو۔`],
+ example:`Description میں '3 revisions' اور Basic پیکج میں '2 revisions' لکھا ہو تو یہ تضاد QA میں پکڑا جاتا ہے۔`},
+
+{id:21, phase:5, title:"Publish & Audit", badge:"Launch",
+ sub:"شائع کریں اور خریدار کی نظر سے دیکھیں",
+ why:`Gig شائع کرنے کے بعد فوراً اس کا [[audit|Audit]] کریں۔ اسے موبائل اور ڈیسک ٹاپ دونوں پر ایسے دیکھیں جیسے ایک نیا خریدار دیکھتا ہے۔`,
+ actions:[
+  `Gig شائع کریں اور اپنا keyword سرچ کر کے دیکھیں کہ وہ کیسی نظر آتی ہے۔`,
+  `موبائل پر Title، Thumbnail اور پیکجز کی ترتیب چیک کریں۔`,
+  `کوئی لنک، تصویر یا متن ٹوٹا ہوا ہو تو فوراً درست کریں۔`,
+  `پہلے دن کے screenshots محفوظ کریں تاکہ بعد میں فرق دیکھ سکیں۔`],
+ example:`اگر موبائل پر آپ کا Title آدھا کٹا نظر آئے تو keyword شروع میں لے آئیں۔`},
+
+{id:22, phase:5, title:"Day-1 Launch Actions", badge:"Launch",
+ sub:"پہلے دن کے عملی کام",
+ why:`پہلے دن کا مقصد یہ ہے کہ آپ پیغامات کا جلد جواب دیں اور ایمانداری سے اپنی Gig لوگوں تک پہنچائیں۔ تیز [[responsetime|Response Time]] اعتماد بڑھاتا ہے۔`,
+ actions:[
+  `نوٹیفکیشنز آن رکھیں اور ہر انکوائری کا جلد، شائستہ جواب دیں۔`,
+  `عام سوالوں کے لیے saved replies تیار رکھیں۔`,
+  `اپنے LinkedIn یا دیگر پروفائلز پر اپنی نئی سروس کا اعلان کریں، پلیٹ فارم کے قواعد کے اندر رہتے ہوئے۔`,
+  `کوئی جعلی آرڈر یا جعلی reviews کا راستہ نہ اپنائیں؛ اس سے اکاؤنٹ بند ہو سکتا ہے۔`],
+ example:`انکوائری کا جواب: 'آپ کے پیغام کا شکریہ! آپ کا پروجیکٹ کس چیز کے لیے ہے اور آپ کو کب تک چاہیے؟'`},
+
+{id:23, phase:5, title:"Early Traction & Optimization", badge:"Growth",
+ sub:"پہلے 30 دن: ناپیں، سیکھیں، ایک وقت میں ایک تبدیلی",
+ why:`ابتدائی دنوں میں اعداد و شمار دیکھ کر معلوم کریں کہ مسئلہ کہاں ہے۔ [[impressions|Impressions]] کم ہوں تو keywords دیکھیں، [[ctr|CTR]] کم ہو تو Title اور Thumbnail، اور [[conversion|Conversion]] کم ہو تو Description، قیمت اور بھروسہ۔`,
+ actions:[
+  `ہفتے میں ایک بار impressions، clicks، messages اور orders نوٹ کریں۔`,
+  `ایک وقت میں صرف ایک چیز بدلیں تاکہ معلوم ہو کہ کس تبدیلی کا اثر ہوا۔`,
+  `کام مکمل ہونے پر خریدار سے ایمانداری سے فیڈبیک کی درخواست کریں؛ reviews کبھی خریدے یا بنائے نہ جائیں۔`,
+  `کامیاب نمونے اور سیکھے ہوئے اسباق اگلی Gig کے لیے محفوظ کریں۔`],
+ example:`اگر کلکس ہیں مگر پیغامات نہیں، تو Description کی پہلی لائن اور FAQ کو بہتر بنائیں اور ایک ہفتہ انتظار کریں۔`}
+];
+
+/* ==========================================================
+   HELPERS
+   ========================================================== */
+const $ = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
+
+// [[key|text]] -> interactive tooltip span (falls back to plain text if key missing)
+function fmt(str){
+  return str.replace(/\[\[(\w+)\|([^\]]+)\]\]/g, (m,k,t)=>{
+    if(!TIPS[k]) return t;
+    return `<span class="tip" tabindex="0" role="button" aria-label="${TIPS[k].t}" data-key="${k}">${t}<span class="i" aria-hidden="true">ⓘ</span></span>`;
+  });
+}
+function plain(str){ return str.replace(/\[\[(\w+)\|([^\]]+)\]\]/g,"$2"); }
+
+/* ==========================================================
+   STATE (localStorage with safe fallback)
+   ========================================================== */
+let done = new Set();
+function loadState(){
+  try{
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(raw){ JSON.parse(raw).forEach(n=>{ if(n>=1 && n<=TOTAL) done.add(n); }); }
+  }catch(e){ /* storage unavailable: progress lasts for this session only */ }
+}
+function saveState(){
+  try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(done))); }catch(e){}
+}
+
+let currentPhase = 0;   // 0 = all
+let query = "";
+
+/* ==========================================================
+   RENDER
+   ========================================================== */
+function renderTabs(){
+  const tabs = $("#tabs");
+  const items = [{id:0, label:"All 23 Steps"}].concat(PHASES.map(p=>({id:p.id, label:`${p.short} · ${p.range}`})));
+  tabs.innerHTML = items.map(t=>`<button type="button" class="tab${t.id===currentPhase?" active":""}" role="tab" aria-selected="${t.id===currentPhase}" data-phase="${t.id}">${t.label}</button>`).join("");
+}
+
+function stepMatches(s){
+  if(currentPhase && s.phase!==currentPhase) return false;
+  if(!query) return true;
+  const hay = [s.title, s.badge, s.sub, plain(s.why), s.actions.map(plain).join(" "), plain(s.example), "step "+s.id].join(" ").toLowerCase();
+  return hay.includes(query);
+}
+
+function cardHTML(s){
+  const isDone = done.has(s.id);
+  return `
+  <article class="card${isDone?" is-done":""}" id="step-${s.id}" data-id="${s.id}">
+    <div class="card-top">
+      <div class="num" aria-hidden="true">${s.id}</div>
+      <div class="titles">
+        <h3><span class="sr">Step ${s.id}: </span>${s.title}</h3>
+        <div class="badges">
+          <span class="badge">${s.badge}</span>
+          ${s.core?'<span class="badge core">Core Foundation</span>':''}
+        </div>
+        <div class="subtitle ur">${s.sub}</div>
+      </div>
+    </div>
+    <div class="section-label">Why it matters</div>
+    <div class="ur">${fmt(s.why)}</div>
+    <div class="section-label">Action Checklist</div>
+    <ul class="actions ur">${s.actions.map(a=>`<li>${fmt(a)}</li>`).join("")}</ul>
+    <div class="example">
+      <div class="section-label">Real-World Example</div>
+      <div class="ur">${fmt(s.example)}</div>
+    </div>
+    <label class="done"><input type="checkbox" data-id="${s.id}" ${isDone?"checked":""}> <span>Mark Completed</span></label>
+  </article>`;
+}
+
+function render(){
+  const main = $("#main");
+  let html = "";
+  let shown = 0;
+  PHASES.forEach(p=>{
+    const list = STEPS.filter(s=>s.phase===p.id && stepMatches(s));
+    if(!list.length) return;
+    shown += list.length;
+    html += `<div class="phase-head"><h2>${p.name}</h2><span class="range">${p.range}</span></div>`;
+    html += list.map(cardHTML).join("");
+  });
+  if(!shown){
+    html = `<div class="empty"><div class="ur">کوئی مرحلہ نہیں ملا۔ کوئی اور لفظ آزما کر دیکھیں۔</div><div>No steps found. Try another word.</div></div>`;
+  }
+  main.innerHTML = html;
+  bindTips();
+  updateProgress();
+}
+
+function updateProgress(){
+  const n = done.size;
+  $("#progressLabel").textContent = `${n} / ${TOTAL} Steps Completed`;
+  $("#barFill").style.width = (n/TOTAL*100)+"%";
+  $("#barWrap").setAttribute("aria-valuenow", n);
+}
+
+/* ==========================================================
+   EVENTS: filters, search, checkbox, reset
+   ========================================================== */
+$("#tabs").addEventListener("click", e=>{
+  const b = e.target.closest(".tab"); if(!b) return;
+  currentPhase = Number(b.dataset.phase);
+  renderTabs(); render();
+});
+$("#searchBox").addEventListener("input", e=>{
+  query = e.target.value.trim().toLowerCase();
+  render();
+});
+$("#main").addEventListener("change", e=>{
+  const cb = e.target.closest('input[type="checkbox"][data-id]'); if(!cb) return;
+  const id = Number(cb.dataset.id);
+  if(cb.checked) done.add(id); else done.delete(id);
+  saveState();
+  const card = cb.closest(".card");
+  if(card) card.classList.toggle("is-done", cb.checked);
+  updateProgress();
+});
+$("#resetBtn").addEventListener("click", ()=>{
+  if(done.size===0) return;
+  if(confirm("Reset all progress? / کیا آپ ساری پیش رفت صاف کرنا چاہتے ہیں؟")){
+    done.clear(); saveState(); render();
+  }
+});
+
+/* ==========================================================
+   TOOLTIP SYSTEM
+   - hover (mouseenter/mouseleave) for desktop
+   - click/tap toggles a pinned tooltip for mobile
+   - outside click and Esc close it
+   - positioned inside the viewport (flips above if no room below)
+   ========================================================== */
+const tipEl = $("#tooltip");
+let activeTip = null, pinned = false;
+
+function showTip(el){
+  const d = TIPS[el.dataset.key]; if(!d) return;
+  if(activeTip && activeTip!==el) activeTip.classList.remove("open");
+  activeTip = el;
+  el.classList.add("open");
+  tipEl.innerHTML = `
+    <div class="tt-term">${d.t}</div>
+    <div class="tt-body">${d.u}</div>
+    <div class="tt-ex"><b>مثال:</b> ${d.e}</div>
+    <div class="tt-close">Tap outside or press Esc to close</div>`;
+  tipEl.classList.add("show");
+  tipEl.setAttribute("aria-hidden","false");
+  placeTip(el);
+}
+function hideTip(){
+  if(activeTip) activeTip.classList.remove("open");
+  activeTip = null; pinned = false;
+  tipEl.classList.remove("show");
+  tipEl.setAttribute("aria-hidden","true");
+}
+function placeTip(el){
+  const margin = 10, gap = 8;
+  tipEl.style.left = "0px"; tipEl.style.top = "0px";
+  const r = el.getBoundingClientRect();
+  const tw = tipEl.offsetWidth, th = tipEl.offsetHeight;
+  const vw = document.documentElement.clientWidth, vh = window.innerHeight;
+  let left = r.left + r.width/2 - tw/2;
+  left = Math.max(margin, Math.min(left, vw - tw - margin));
+  let top = r.bottom + gap;
+  if(top + th > vh - margin){            // not enough room below: flip above
+    const above = r.top - th - gap;
+    top = above >= margin ? above : Math.max(margin, vh - th - margin);
+  }
+  tipEl.style.left = left+"px";
+  tipEl.style.top = top+"px";
+}
+function bindTips(){
+  $$(".tip").forEach(el=>{
+    if(el.dataset.bound) return;
+    el.dataset.bound = "1";
+    el.addEventListener("mouseenter", ()=>{ if(!pinned) showTip(el); });
+    el.addEventListener("mouseleave", ()=>{ if(!pinned && activeTip===el) hideTip(); });
+    el.addEventListener("click", ev=>{
+      ev.stopPropagation();
+      if(activeTip===el && pinned){ hideTip(); }
+      else { showTip(el); pinned = true; }
+    });
+    el.addEventListener("keydown", ev=>{
+      if(ev.key==="Enter" || ev.key===" "){ ev.preventDefault(); el.click(); }
+    });
+  });
+}
+document.addEventListener("click", e=>{
+  if(!e.target.closest(".tip") && !e.target.closest("#tooltip")) hideTip();
+});
+document.addEventListener("keydown", e=>{ if(e.key==="Escape") hideTip(); });
+window.addEventListener("scroll", ()=>{ if(activeTip && tipEl.classList.contains("show")) placeTip(activeTip); }, {passive:true});
+window.addEventListener("resize", ()=>{ if(activeTip) placeTip(activeTip); });
+
+/* ==========================================================
+   WHATSAPP BRIDGE
+   ========================================================== */
+(function setupWhatsApp(){
+  const btn = $("#waBtn"), note = $("#waNote");
+  if(WHATSAPP_NUMBER && /^\d{8,15}$/.test(WHATSAPP_NUMBER)){
+    btn.href = "https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(WHATSAPP_MESSAGE);
+    note.style.display = "none";
+  }else{
+    btn.addEventListener("click", e=>e.preventDefault());
+  }
+})();
+
+/* ==========================================================
+   INIT
+   ========================================================== */
+loadState();
+renderTabs();
+render();
+// Welcome-banner tooltip needs binding too
+bindTips();
+</script>
+<style>.sr{position:absolute;left:-9999px}</style>
+</body>
+</html>
